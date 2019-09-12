@@ -40,4 +40,23 @@ class User extends Authenticatable
     public function blogs(){
         return $this->hasMany('App\Models\Blog');
     }
+
+    //mutator @modificador de campo
+    public function setNameAttribute($value){
+        $this->attributes['name']=strtoupper($value);
+    }
+
+    //accessors
+    public function getFullNameAttribute(){
+        return "{$this->id} {$this->name}";
+    }
+
+    public function getListBlogAttribute(){
+        return $this->blogs;
+    }
+
+    protected $appends = [
+        "full_name",
+        "list_blog"
+    ];
 }

@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user', 'UserController@index');
+Route::post('/user/post', 'UserController@store');
+
+//rutas para la prueba del taller
+Route::get('/modulo/index', 'ModuloController@index');
+Route::get('/modulo/create', 'ModuloController@create');
+Route::post('/modulo/store', 'ModuloController@store');
