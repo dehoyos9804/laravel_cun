@@ -16,6 +16,8 @@ class ModuloController extends Controller
     {
         $modulo = Modulo::find(1);
         return $modulo->full_name;
+        //return csrf_token();
+        //jieMK6yqsdqR8xr71rvaCXBbgi3TgF99EfvcLGLm
     }
 
     /**

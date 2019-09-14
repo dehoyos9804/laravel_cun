@@ -30,7 +30,7 @@ class Modulo extends Model
     }
 
     //mutator colocar en mayuscula los nombres de la clase
-    public function setNameAttribute($value){
+    public function setNombreAttribute($value){
         $this->attributes['nombre'] = strtolower($value);
     }
 
