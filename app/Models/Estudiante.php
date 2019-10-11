@@ -17,4 +17,9 @@ class Estudiante extends Model
     public function examenes(){
     	return $this->hasMany('App\Models\Examen');
     }
+
+    //relacion muchos a muchos
+    public function materias(){
+        return $this->belongsToMany('App\Models\Materia');
+    }
 }

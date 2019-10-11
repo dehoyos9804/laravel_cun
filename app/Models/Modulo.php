@@ -33,6 +33,4 @@ class Modulo extends Model
     public function setNombreAttribute($value){
         $this->attributes['nombre'] = strtolower($value);
     }
-
-    
 }

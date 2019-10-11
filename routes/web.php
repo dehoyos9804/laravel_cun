@@ -22,3 +22,18 @@ Route::post('/user/post', 'UserController@store');
 Route::get('/modulo/index', 'ModuloController@index');
 Route::get('/modulo/create', 'ModuloController@create');
 Route::post('/modulo/store', 'ModuloController@store');
+
+//rutas para la prueba del taller 2
+Route::post('/historial/store', 'HistorialController@store');//primer punto
+Route::get('/cliente/index', 'ClienteController@index');//primer punto
+Route::post('/cliente/store', 'ClienteController@store');//segundo punto
+Route::post('/cliente/guardar', 'ClienteController@guardarCreate');//segundo punto
+Route::post('/estudiante/guardar_attach', 'EstudianteController@storeAttach');//tercer punto
+Route::post('/estudiante/guardar_sync', 'EstudianteController@storeSync');//tercer punto
+Route::get('/pais/index', 'PaisController@index');//cuarto punto
+
+//rutas para la prueba del taller 3
+Route::post('/comentario/store_create', 'ComentarioController@storeCreate');//segundo punto
+Route::post('/comentario/store_createmany', 'ComentarioController@storeCreateMany');//segundo punto
+Route::get('/comentario/index', 'ComentarioController@index');//tercer punto
+Route::get('/comentario/get_noticia', 'ComentarioController@getNoticias');//tercer punto

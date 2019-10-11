@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Estudiante;
+use App\Models\Materia;
 use Illuminate\Database\Seeder;
 
 class EstudianteSeeder extends Seeder
@@ -16,6 +17,9 @@ class EstudianteSeeder extends Seeder
         	->create()
         	->each(function($student){
         		$student->examenes()->save(factory(App\Models\Examen::class)->make());
-        	});
+            });
+        
+        //guardar las materias que perteneceran al estudiante
+        factory(App\Models\Materia::class, 5)->create();
     }
 }
