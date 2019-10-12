@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class ComentarioController extends Controller
 {
     public function index(){
-        //zzqX1pFZpjCgPBL7qBBsYRy6xlGPJHRKWKRuJOb0
+        //58vt3lLjjdC589hoyQxTxJw9N07LErbeL8jad8HJ
         //return csrf_token();
         $comment = Comentario::find(1);
         return $comment->comentable;

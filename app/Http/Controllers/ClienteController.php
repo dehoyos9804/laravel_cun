@@ -14,7 +14,7 @@ class ClienteController extends Controller
         //2T2vnmglbNenaXWTwP4HaRxjMmgakxgWqN2WByZz
         $cliente = Cliente::find(1);
         return $cliente;
-        return csrf_token();
+        //return csrf_token();
     }
 
     //método que permite guardar con saveMany
