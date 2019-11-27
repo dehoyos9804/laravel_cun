@@ -6,6 +6,7 @@ use App\Models\Estudiante;
 use App\Models\Materia;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\EstudianteRequest;
 
 class EstudianteController extends Controller
 {
@@ -27,6 +28,30 @@ class EstudianteController extends Controller
         $estudiante->materias()->sync($materia);
 
         return $estudiante->materias;
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(EstudianteRequest $request)
+    {
+        $data = $request->all();
+        return $data;
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
     }
 
 

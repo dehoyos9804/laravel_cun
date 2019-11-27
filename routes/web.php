@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {
+    //return view('welcome');
+    return csrf_token();
+    //tbJFkZdG5XUoRGExVNHnkjslvNrK43Heuac5FdSO
+});*/
 
 Route::get('/user', 'UserController@index');
 Route::post('/user/post', 'UserController@store');
@@ -37,3 +39,6 @@ Route::post('/comentario/store_create', 'ComentarioController@storeCreate');//se
 Route::post('/comentario/store_createmany', 'ComentarioController@storeCreateMany');//segundo punto
 Route::get('/comentario/index', 'ComentarioController@index');//tercer punto
 Route::get('/comentario/get_noticia', 'ComentarioController@getNoticias');//tercer punto
+
+//rutas para el primer taller corte 3
+Route::post('/estudiante/store', 'EstudianteController@store');
